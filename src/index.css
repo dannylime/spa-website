@@ -11,10 +11,12 @@ html, body {
   min-height: 100%;
 }
 body {
-  background: radial-gradient(at top left, rgb(240, 235, 235) 0%, rgb(229, 102, 102) 100%);
   background-repeat: no-repeat;
+  background: radial-gradient(circle, rgb(223, 223, 223) 0%, rgb(148, 145, 149) 100%);
+  width: 100vw;
 }
 .container {
+  margin-top: 10vw;
   display: grid;
   place-content: center center;
   width: 100vw;

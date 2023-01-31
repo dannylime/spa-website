@@ -38,10 +38,19 @@ const Products: React.FC = () => {
   return (
     <div className="container">
       {error && <div className="error">{error}</div>}
-      <ProductList products={products} onProductSelect={handleProductSelect} />
-      <Pagination pageNumber={pageNumber} handlePageChange={handlePageChange} />
-      {selectedProduct && (
+      {selectedProduct ? (
         <ProductModal product={selectedProduct} onClose={handleClose} />
+      ) : (
+        <>
+          <ProductList
+            products={products}
+            onProductSelect={handleProductSelect}
+          />
+          <Pagination
+            pageNumber={pageNumber}
+            handlePageChange={handlePageChange}
+          />
+        </>
       )}
     </div>
   );
